@@ -1,33 +1,32 @@
 <script setup lang="ts">
-import type { NavItem } from '@nuxt/content/dist/runtime/types'
+import type {NavItem} from '@nuxt/content/dist/runtime/types'
 
 const navigation = inject<Ref<NavItem[]>>('navigation', ref([]))
 
 const links = [{
-  label: 'Docs',
-  to: '/docs'
-}, {
-  label: 'Pricing',
-  to: '/pricing'
-}, {
-  label: 'Blog',
-  to: '/blog'
+    label: 'Articles',
+    icon: 'i-heroicons-book-open',
+    to: '/getting-started'
 }]
 </script>
 
 <template>
-  <UHeader :links="links">
+  <UHeader>
     <template #logo>
-      Nuxt UI Pro <UBadge label="SaaS" variant="subtle" class="mb-0.5" />
+      <NuxtLink to="/">
+        <Logo class="size-20 text-red-500"/>
+      </NuxtLink>
     </template>
 
     <template #right>
-      <UButton label="Log in" color="gray" to="/login" />
-      <UButton label="Sign up" icon="i-heroicons-arrow-right-20-solid" trailing color="black" to="/signup" class="hidden lg:flex" />
+      <div class="space-x-3 font-black">
+        <NuxtLink v-for="link in links" class="font-bold" :key="link.label" :to="link.to">{{ link.label }}</NuxtLink>
+      </div>
     </template>
 
     <template #panel>
-      <UNavigationTree :links="mapContentNavigation(navigation)" default-open />
+      <UNavigationTree :links="mapContentNavigation(navigation)"/>
     </template>
   </UHeader>
 </template>
+

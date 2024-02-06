@@ -1,24 +1,16 @@
 <script setup lang="ts">
-import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
 
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation(), { default: () => [] })
-const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', { default: () => [], server: false })
+const {data: navigation} = await useAsyncData('navigation', () => fetchContentNavigation(), {default: () => []})
 
 provide('navigation', navigation)
 </script>
 
 <template>
-  <div>
-    <Header />
-
+  <div class="bg-black">
+    <Header/>
     <UMain>
-      <slot />
+      <slot/>
     </UMain>
 
-    <Footer />
-
-    <ClientOnly>
-      <LazyUDocsSearch :files="files" :navigation="navigation" />
-    </ClientOnly>
   </div>
 </template>
