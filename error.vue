@@ -36,7 +36,6 @@ provide('navigation', navigation)
       </UContainer>
     </UMain>
 
-    <Footer />
     <UNotifications />
   </div>
 </template>
