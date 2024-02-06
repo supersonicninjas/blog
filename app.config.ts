@@ -1,15 +1,15 @@
 export default defineAppConfig({
   ui: {
-    primary: "brand",
-    gray: "stone",
+    primary: "red",
+    gray: "neutral",
     variables: {
       light: {
         background: "255 255 255",
-        foreground: "var(--color-gray-700)",
+        foreground: "var(--color-black)",
       },
       dark: {
-        background: "var(--color-gray-900)",
-        foreground: "var(--color-gray-200)",
+        background: "var(--color-black)",
+        foreground: "var(--color-gray-100)",
       },
       header: {
         height: "4rem",

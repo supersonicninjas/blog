@@ -6,11 +6,8 @@ provide('navigation', navigation)
 </script>
 
 <template>
-  <div class="bg-black">
     <Header/>
     <UMain>
       <slot/>
     </UMain>
-
-  </div>
 </template>

@@ -15,8 +15,8 @@ useHead({
 })
 
 useSeoMeta({
-    titleTemplate: '%s - Nuxt UI Pro - SaaS template',
-    ogSiteName: 'Nuxt UI Pro - SaaS template',
+    titleTemplate: '%s - Supersonic Ninjas',
+    ogSiteName: 'Supersonic Ninjas',
     twitterCard: 'summary_large_image'
 })
 </script>
