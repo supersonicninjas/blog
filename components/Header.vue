@@ -3,13 +3,8 @@ import type {NavItem} from '@nuxt/content/dist/runtime/types'
 
 const navigation = inject<Ref<NavItem[]>>('navigation', ref([]))
 
-const links = [{
-    label: 'Articles',
-    icon: 'i-heroicons-book-open',
-    to: '/getting-started'
-}]
+const links = []
 </script>
-
 <template>
   <UHeader>
     <template #logo>
