@@ -3,6 +3,10 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 
 export default <Partial<Config>>{
     darkMode: ['class'],
+    content:[
+        './components/**/**.vue',
+        './content/**/**.{yml,md}',
+    ],
     theme: {
         extend: {
             fontFamily: {
