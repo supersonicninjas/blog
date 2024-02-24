@@ -11,7 +11,25 @@ export default defineNuxtConfig({
         '@vueuse/nuxt',
         'nuxt-og-image',
     ],
-
+    content: {
+        highlight: {
+            langs: [
+                'swift',
+                'kotlin',
+                'bash',
+                'javascript',
+                'php'
+            ],
+            theme: {
+                // Default theme (same as single string)
+                default: 'github-dark',
+                // Theme used if `html.dark`
+                dark: 'github-dark',
+                // Theme used if `html.sepia`
+                sepia: 'monokai'
+            }
+        }
+    },
     hooks: {
         // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
         'components:extend': (components) => {
@@ -36,8 +54,10 @@ export default defineNuxtConfig({
             'DM+Sans': [300, 400, 500, 600, 700],
         },
     },
-    routeRules: {
+    runtimeConfig: {
+        public: {}
     },
+    routeRules: {},
     devtools: {
         enabled: true,
     },
