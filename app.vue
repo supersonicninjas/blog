@@ -1,12 +1,18 @@
 <script setup lang="ts">
-
-
+const key = '7bde8c4986d24540adc65d2d50195a89'
+const token = JSON.stringify(`{token: ${key} }`)
 
 useHead({
+    script: [{
+        id: 'cloudflare',
+        src: 'https://static.cloudflareinsights.com/beacon.min.js',
+        defer: true,
+        'data-cf-beacon': JSON.parse(token)
+    }],
     meta: [
         {charset: 'utf-8'},
         {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-        {key: 'theme-color', name: 'theme-color', content: '#000'}
+        {key: 'theme-color', name: 'theme-color', content: '#000'},
     ],
     link: [
         {rel: 'manifest', href: '/site.webmanifest'},
@@ -20,6 +26,7 @@ useHead({
         lang: 'en',
         class: 'dark bg-black'
     }
+
 
 })
 
