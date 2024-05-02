@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const key = '7bde8c4986d24540adc65d2d50195a89'
-const token = JSON.stringify(`{token: ${key} }`)
+const token = JSON.stringify(`{'token': '${key}' }`)
 
 useHead({
     script: [{
